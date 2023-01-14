@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e329504d-8996-4dda-88c5-2cfe75be2271">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT*FROM transaksi]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="semester" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="npm" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="biaya" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pajak" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total_keseluruhan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="162" y="25" width="227" height="20" uuid="0da45af4-e557-4f80-a5f3-8cf3fcb244bb"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA TRANSAKSI]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="34" height="20" uuid="f3229174-29ab-4fa3-9dc1-9fc855fd29da"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="0" width="92" height="20" uuid="bbf0eadc-e38f-4b84-9ca6-ba0b126742b3"/>
+				<text><![CDATA[SEMESTER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="126" y="0" width="92" height="20" uuid="29010a1e-c6ab-44fe-87f9-c15c28f5b613"/>
+				<text><![CDATA[NPM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="0" width="92" height="20" uuid="b0271744-820b-4a7a-a110-676e1d335e72"/>
+				<text><![CDATA[BIAYA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="0" width="92" height="20" uuid="dd2d0af2-0833-411b-9618-bfee58afcbb7"/>
+				<text><![CDATA[PAJAK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="402" y="0" width="150" height="20" uuid="12459c17-1a3c-44b7-9b88-59dfff4a96c7"/>
+				<text><![CDATA[TOTAL KESELURUHAN]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="34" height="20" uuid="2de0c84a-1470-4ffc-b1f9-26e35623b6f0"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="34" y="0" width="92" height="20" uuid="a7d36646-9104-43b3-97d5-dac3553fa69b"/>
+				<textFieldExpression><![CDATA[$F{semester}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="126" y="0" width="92" height="20" uuid="0608a561-7dc1-4e1f-b7af-fd63963a2ab9"/>
+				<textFieldExpression><![CDATA[$F{npm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="218" y="0" width="92" height="20" uuid="af941fc6-5dc8-489a-8a09-d518353eb4ac"/>
+				<textFieldExpression><![CDATA[$F{biaya}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="0" width="92" height="20" uuid="953bc0a5-f169-428c-8e6c-6f51b225d992"/>
+				<textFieldExpression><![CDATA[$F{pajak}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="402" y="0" width="150" height="20" uuid="1829e85f-3a0e-44bb-b3a3-4f162726cec3"/>
+				<textFieldExpression><![CDATA[$F{total_keseluruhan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
